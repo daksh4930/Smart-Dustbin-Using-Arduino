@@ -16,10 +16,7 @@ Required :
 
 CIRCUIT DIAGRAM:  
 
-The circuit diagram of smart dustbin is shown in given below. Arduino Uno board 
-consist ATmega328 P microcontroller, it is important component of UNO board. In 
-this other components are present like a power supply, ultrasonic module and 
-servo motor etc. 
+The circuit diagram of smart dustbin is shown in given below. 
 
 The ultrasonic sensor echo pin and trigger pin is connected to pin digital pin D7 
 and D8. The +Vcc pin is connected to +5V supply and GND pin is connected to 
@@ -28,40 +25,7 @@ connected to digital pin D9 of arduino. Hence, servo motor is used to open the c
 of dustbin. For this project and components used, the preset level of distance 
 between dustbin and hand is fixed to 40 cm. 
 
-Ultrasonic Sensor: This sensor is used in to locate the distance between the smart 
-dustbin and hand/object come near to it. The principle behind finding distance of 
-obstacle is sonar wave. It only detects obstacle when Trigger pin receive high 
-pulse for the period more than 10 us. When this sensor verifies the presence of 
-hand (obstacle) it starts to send eight cycles of ultrasonic burst at 40 KHz and then 
-it waits for reflected ultrasonic signal. 
-
-Ultrasonic sensor module has two drums. One of the drums is used for 
-transmitting the pulse of ultrasonic and the second drums are for receiving the 
-ultrasonic signal. 
-When ultrasonic detect/sense object, the echo pin of module is set high. Waiting 
-period of reflected pulse is completely dependent upon the location of obstacle. 
-When the echo signal is obtained, we can calculate the distance by using the 
-formula 
-
 Distance (in cm) = (duration/2) / 29.1 
-
-Initially, the cap of dustbin is switched back to zero-degree position (Close) by the 
-servo motor. The controller keeps on monitoring the signal receive from ultrasonic 
-module. When ultrasonic module detects an obstacle, the controller check if it crosses 
-a threshold distance value set for open the cap of dustbin. As soon as that happens, 
-the controller triggers the servo motor when then open the cap for limited line (as set 
-in code part). For this system prototype set time is given for 2 second. Here in this 
-project also used an ON/OFF switch, in order to activate and de-activated the smart 
-dustbin whenever require as per situation. A pull up resistor of 10K is connected in 
-series of switch as shown in circuit diagram in order to solve the de-bouncing problem. 
-
-We can also use Arduino NANO instead of Arduino uno. Do not have to change source 
-code because the board use identical pin for controlling servo motor, switch and 
-ultrasonic sensor. The simplest part of the project smart dustbin using arduino is 
-software part because it is clean, simple and easy to understand. The program check 
-the distance had also used “Servo.h” inbuilt library function for servo operation. It can 
-assume any value of motor rotation using “myServo.write(angle)” function but here we 
-had only use two state of position (1) zero degree and (2) 180.
 
 <img width="542" height="507" alt="image" src="https://github.com/user-attachments/assets/ab98fda8-13c4-4374-8d84-bb6fd9b65e10" />    
 
