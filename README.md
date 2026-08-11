@@ -25,7 +25,7 @@ connected to digital pin D9 of arduino. Hence, servo motor is used to open the c
 of dustbin. For this project and components used, the preset level of distance 
 between dustbin and hand is fixed to 40 cm. 
 
-Distance (in cm) = (duration/2) / 29.1 
+distance = duration × 0.0343 / 2
 
 <img width="542" height="507" alt="image" src="https://github.com/user-attachments/assets/ab98fda8-13c4-4374-8d84-bb6fd9b65e10" />    
 
